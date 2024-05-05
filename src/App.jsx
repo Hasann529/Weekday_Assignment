@@ -8,6 +8,7 @@ myHeaders.append("Content-Type", "application/json");
 let offset = -12;
 
 function App() {
+  const [jobDesList, setJobDesList] = useState([]); // Initialize job description state
 
   
   // function for fetching data
@@ -37,6 +38,8 @@ function App() {
         const result = await response.json();
         const { jdList, totalCount } = result;
         console.log(jdList);
+        setJobDesList(jdList);
+
 
         
       }
@@ -56,7 +59,7 @@ function App() {
   return (
     <div className='App'>
         <Filters />
-        <MainBody />
+        <MainBody jobDesList={jobDesList}/>
     </div>
   )
 }

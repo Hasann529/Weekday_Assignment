@@ -1,12 +1,12 @@
 import React from 'react'
 import JobCard from './JobCard'
 
-const MainBody = () => {
+const MainBody = ({jobDesList}) => {
   return (
     <div className='main-body'>
     <div className='inner'>
 
-      <JobCard />
+    {jobDesList.map(job => <JobCard key={job.jdUid} job={job} />)}
     </div>
     </div>
   )

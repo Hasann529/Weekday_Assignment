@@ -11,7 +11,7 @@ function CapL(string) {
   };
   
 
-const JobCard = () => {
+const JobCard = ({job}) => {
   return (
     <div className="card">
     <p
@@ -28,7 +28,7 @@ const JobCard = () => {
     <div style={{ display: "flex", gap: ".5rem" }}>
       <img
         style={{ width: "25px", height: "2.5rem" }}
-        src={"https://logo.clearbit.com/dropbox.com"}
+        src={job.logoUrl}
         alt="logo"
       />
       <div style={{ display: "flex", flexDirection: "column", gap: ".4rem" }}>
@@ -40,13 +40,13 @@ const JobCard = () => {
             letterSpacing: "1px",
           }}
         >
-          {"Dropbox"}
+          {job.companyName}
         </p>
-        <p style={{ fontSize: "14px", fontWeight: 300 }}>{CapL("FrontEnd")}</p>
-        <p style={{ fontSize: "11px", fontWeight: 400 }}>{CapL("Delhi")}</p>
+        <p style={{ fontSize: "14px", fontWeight: 300 }}>{CapL(job.jobRole)}</p>
+        <p style={{ fontSize: "11px", fontWeight: 400 }}>{CapL(job.location)}</p>
       </div>
     </div>
-    <p style={{ fontSize: "14px" }}>Estimated Salary: ₹{44} - {52} LPA ✅</p>
+    <p style={{ fontSize: "14px" }}>Estimated Salary: ₹{job.minJdSalary} - {job.maxJdSalary} LPA ✅</p>
     <div style={{ display: "flex", flexDirection: "column", gap: ".2rem" }}>
       <p style={{ fontSize: "1rem", fontWeight: 400 }}>About Company:</p>
       <p style={{ fontSize: "14px", fontWeight: 600 }}>About Us</p>
@@ -69,7 +69,7 @@ const JobCard = () => {
       >
         Minimum Experience
       </p>
-      <p style={{ fontSize: "14px", fontWeight: 300 }}>4 years</p>
+      <p style={{ fontSize: "14px", fontWeight: 300 }}>{job.minExp ?? 0} years</p>
     </div>
     <div style={{ display: "flex", flexDirection: "column", gap: ".3rem" }}>
       <button
