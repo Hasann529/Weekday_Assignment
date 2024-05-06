@@ -45,7 +45,7 @@ export const expOptions = [
     { value: "pune", label: "Pune" },
     { value: "chennai", label: "Chennai" },
     { value: "mumbai", label: "Mumbai" },
-    { value: "delhi", label: "Delhi" },
+    { value: "delhi ncr", label: "Delhi" },
     { value: "gurgaon", label: "Gurgaon" },
     { value: "noida", label: "Noida" },
     { value: "kolkata", label: "Kolkata" },
