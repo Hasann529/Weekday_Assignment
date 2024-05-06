@@ -40,7 +40,7 @@ export const expOptions = [
   
   export const locationOptions = [
     { value: "india", label: "India" },
-    { value: "bengaluru", label: "Bengaluru" },
+    { value: "bangalore", label: "Bangalore" },
     { value: "hyderabad", label: "Hyderabad" },
     { value: "pune", label: "Pune" },
     { value: "chennai", label: "Chennai" },
