@@ -1,5 +1,21 @@
 # React + Vite
 
+........ Guide to run on local device ........
+
+// clone the repository to local device by
+git clone https://github.com/Hasann529/Weekday_Assignment.git
+
+// Install dependencies by
+npm install
+
+// Start the server by
+npm run dev
+
+..............................................
+
+
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
